@@ -6,6 +6,8 @@ let UserSchema = new Schema({
   username: {type: String, required:true},
   password: {type: String, required:true},
   clicks: {type: Number, default:0},
+  multiplier: {type: Number, default:0}
+
 }, {timestamps: true});
 
 UserSchema.pre('save', function(next){

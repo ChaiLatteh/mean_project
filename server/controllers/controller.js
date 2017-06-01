@@ -68,7 +68,7 @@ module.exports = {
         return res.status(500).send("ERROR");
       }
       else{
-        user.clicks+=1;
+        user.clicks+=1 + user.multiplier;
         user.save((err, user)=>{
           if(err){
             console.log(err);
@@ -80,6 +80,9 @@ module.exports = {
         })
       }
     })
+  },
+  increaseClick: (req, res)=>{
+    console.log('hello')
   }
   //NEW METHOD HERE
 }
