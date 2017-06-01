@@ -40,5 +40,11 @@ export class IndexComponent implements OnInit {
     })
     .catch((err)=>console.log(err))
   }
+  playAudio(){
+    let audio = new Audio();
+    audio.src="/anvil.mp3"
+    audio.load();
+    audio.play();
+  }
 
 }
