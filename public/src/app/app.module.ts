@@ -11,6 +11,10 @@ import { RegisterComponent } from './logreg/register/register.component';
 import { LoginComponent } from './logreg/login/login.component';
 import { IndexComponent } from './index/index.component';
 import { IndexService } from './index/index.service';
+import { ItemsComponent } from './index/items/items.component';
+import { ItemService } from './index/items/item.service';
+import { ItemsBbComponent } from './index/items/items-bb/items-bb.component';
+import { ItemsStoreComponent } from './index/items/items-store/items-store.component'
 
 @NgModule({
   declarations: [
@@ -19,6 +23,9 @@ import { IndexService } from './index/index.service';
     RegisterComponent,
     LoginComponent,
     IndexComponent,
+    ItemsComponent,
+    ItemsBbComponent,
+    ItemsStoreComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,7 @@ import { IndexService } from './index/index.service';
     HttpModule,
     routing,
   ],
-  providers: [LogregService, IndexService],
+  providers: [LogregService, IndexService, ItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

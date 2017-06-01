@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IndexService } from './index.service';
 import { Router } from '@angular/router';
 
@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  user:any;
+
+  @Input() user: any;
   constructor(
     private _indexService:IndexService,
     private _router:Router,
@@ -40,11 +41,9 @@ export class IndexComponent implements OnInit {
     })
     .catch((err)=>console.log(err))
   }
-  playAudio(){
-    let audio = new Audio();
-    audio.src="/anvil.mp3"
-    audio.load();
-    audio.play();
+  increaseUserClick(user){
+    console.log("@ index")
+    this.updateCurrentUser()
   }
 
 }
