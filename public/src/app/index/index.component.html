@@ -5,7 +5,7 @@
   <h3 *ngIf="user.clicks>=200&&user.clicks<300">You are: a Dragon</h3>
   <h3 *ngIf="user.clicks>=300&&user.clicks<400">You are: a Sensei</h3>
 
-  <button (click)="buttonClicked(user)">Click</button>
+  <button (click)="buttonClicked(user); playAudio()">Click</button>
   <h3>Gold: {{user.clicks}}</h3>
 </div>
 <div *ngIf='user'>
@@ -27,4 +27,9 @@ Work on...
   <li>user face upload</li>
 </ul>
 
+<audio autoplay loop controls controlsList="nodownload">
+  <source src="intobattle.mp3" type="audio/mpeg">
+</audio>
+
 <app-items (newItemEvent)="increaseUserClick($event)"></app-items>
+
