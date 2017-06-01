@@ -5,7 +5,10 @@ let Schema = mongoose.Schema;
 let UserSchema = new Schema({
   username: {type: String, required:true},
   password: {type: String, required:true},
+  firstname: {type: String, required:true},
+  lastname: {type: String, required:true},
   clicks: {type: Number, default:0},
+  pickaxe: {type:String, default:"bronze"},
 }, {timestamps: true});
 
 UserSchema.pre('save', function(next){

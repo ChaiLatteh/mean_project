@@ -68,7 +68,15 @@ module.exports = {
         return res.status(500).send("ERROR");
       }
       else{
-        user.clicks+=1;
+        if(user.pickaxe==bronze){
+          user.clicks+=1;
+        }
+        else if(user.pickaxe==silver){
+          user.clicks+=2;
+        }
+        else if(user.pickaxe==gold){
+          user.clicks+=3;
+        }
         user.save((err, user)=>{
           if(err){
             console.log(err);
@@ -80,6 +88,21 @@ module.exports = {
         })
       }
     })
-  }
+  },
+  leaderboard: (req, res)=>{
+    User.find((err,users)=>{
+      if(err){
+        console.log(err);
+        return res.status(500).send("Error getting users list");
+      }
+      else{
+        return res.json(users);
+      }
+    }).sort({clicks:-1})
+  },
+  logout: (req, res)=>{
+    req.session.destroy();
+    res.redirect('/login');
+  },
   //NEW METHOD HERE
 }

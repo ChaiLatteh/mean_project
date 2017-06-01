@@ -18,8 +18,10 @@ export class LoginComponent implements OnInit {
   }
   login(formData){
     this._logregService.login(formData.value)
-    .then(()=>this._router.navigate(['/index']))
-    .catch(()=>console.log("LOGIN FAIL"))
+    .then(()=>this._router.navigate(['/']))
+    .catch(()=>{
+      alert("Entered username or password is incorrect.");
+    })
   }
 
 }

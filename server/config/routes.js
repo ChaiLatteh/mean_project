@@ -6,4 +6,6 @@ module.exports = app => {
   app.get('/api/current', controller.getCurrentUser);
   app.get('/api/current/update', controller.updateCurrentUser);
   app.post('/api/button_clicked', controller.buttonClicked);
+  app.get('/api/leaderboard', controller.leaderboard);
+  app.get('/logout', controller.logout);
 }

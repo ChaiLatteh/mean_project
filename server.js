@@ -19,7 +19,7 @@ app.use(session(sessionConfig));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public', 'dist')));
-app.use(express.static(path.join(__dirname, 'public', 'images')));
+app.use(express.static(path.join(__dirname, 'public', 'static')));
 
 
 require('./server/config/mongoose');

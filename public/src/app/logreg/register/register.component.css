@@ -1,3 +1,8 @@
+form{
+  border:2px solid blue;
+  padding:10px;
+  display:table;
+}
 div{
   padding: 5px 5px 5px 0px;
   color:red;
