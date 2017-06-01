@@ -1,0 +1,28 @@
+<div *ngIf='user'>
+  <h2>Welcome {{user.username}}!</h2>
+  <h3 *ngIf="user.clicks<100">You are: a Snail</h3>
+  <h3 *ngIf="user.clicks>=100&&user.clicks<200">You are: a Monkey</h3>
+  <h3 *ngIf="user.clicks>=200&&user.clicks<300">You are: a Dragon</h3>
+  <h3 *ngIf="user.clicks>=300&&user.clicks<400">You are: a Sensei</h3>
+
+  <button (click)="buttonClicked(user)">Click</button>
+  <h3>Gold: {{user.clicks}}</h3>
+</div>
+<div *ngIf='user'>
+  <div *ngIf="user.clicks<100">Get 100 gold to promote to Monkey</div>
+  <div *ngIf="user.clicks>=100&&user.clicks<200">Get 200 gold to promote to Dragon</div>
+  <div *ngIf="user.clicks>=200&&user.clicks<300">Get 300 gold to promote to sensei</div>
+</div>
+<div *ngIf='user' id="click">
+  <img *ngIf="user.clicks%3==0" src="/ninjastart.png">
+  <img *ngIf="user.clicks%3==1" src="/ninja1.png">
+  <img *ngIf="user.clicks%3==2" src="/ninja2.png">
+</div>
+Work on...
+<ul>
+  <li>sound</li>
+  <li>background image</li>
+  <li>more interaction</li>
+  <li>reset click counter function</li>
+  <li>user face upload</li>
+</ul>
