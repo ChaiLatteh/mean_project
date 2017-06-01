@@ -1,0 +1,15 @@
+<button id="leaderboard">Leaderboard</button>
+<table>
+  <tr>
+    <th>Rank</th>
+    <th>Username</th>
+    <th>Name</th>
+    <th>Gold</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{users.indexOf(user)+1}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.firstname}}</td>
+    <td>{{user.clicks}}</td>
+  </tr>
+</table>

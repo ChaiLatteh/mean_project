@@ -1,0 +1,16 @@
+#leaderboard{
+  position:absolute;
+  top:5px;
+  left:75px;
+  color:white;
+  background-color:white;
+  border:1px solid white;
+}
+table, th, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding:5px;
+}
+th{
+  background-color:silver;
+}

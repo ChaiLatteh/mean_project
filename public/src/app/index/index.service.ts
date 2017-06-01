@@ -21,4 +21,9 @@ export class IndexService {
     .map((response:Response)=>response.json())
     .toPromise()
   }
+  leaderboard(){
+    return this._http.get('api/leaderboard')
+    .map((response:Response)=>response.json())
+    .toPromise()
+  }
 }
